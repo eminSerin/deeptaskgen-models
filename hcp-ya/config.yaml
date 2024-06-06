@@ -1,0 +1,14 @@
+architecture: unetminimal # Model architecture
+conv_dim: 3 # Dimension of convolutional kernels.
+max_depth: 1 # Maximum depth of encoder and decoder networks
+activation: relu_inplace # Activation function 
+upsampling_mode: trilinear # Upsampling mode used during concetanation.
+batch_norm: true # Batch normalization within each block.
+fdim: 64 # Number of feature dimensions
+n_conv_layers: 1 # Number of convolutional layers in each block.
+loss_mask: false # Mask to use for loss computation
+loss: mse # MSE as loss function.
+optimizer: adam # Adam optimizer
+lr: 0.001 # Learning rate
+lr_scheduler: true # ReduceLROnPlateau schedule
+n_epochs: 100 # Number of training epochs
