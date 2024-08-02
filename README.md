@@ -3,11 +3,11 @@ This repository contains trained DeepTaskGen models on various open datasets. Th
 
 The models are trained on the following datasets:
 
-1. **Human Connectome Project Young Adult (HCP-YA):** The main model, serving as the pre-trained model for other datasets, was initially trained on this dataset (Date: 20/09/2023). The model is available at `hcp-ya/main_model_200923.ckpt`, and it can predict [47 different task contrast maps](misc/hcp-ya_contrasts.txt). 
+1. **Human Connectome Project Young Adult (HCP-YA):** The main model, serving as the pre-trained model for other datasets, was initially trained on this dataset (Date: 20/09/2023). The model is available at `hcp-ya/main_model_hcp-ya_020824.ckpt`, and it can predict [47 different task contrast maps](misc/hcp-ya_contrasts.txt). 
 
-2. **Human Connectome Project Development (HCP-D):** The pre-trained model (on HCP-YA) was fine-tuned using the EMOTION FACES-SHAPES task (Finetuning Schedule 1, Date: 02/10/2023). The model is available at `hcp-d/finetuned_model_021023.ckpt`, and it can predict [47 different task contrast maps](misc/hcp-ya_contrasts.txt).
+2. **Human Connectome Project Development (HCP-D):** The pre-trained model (on HCP-YA) was fine-tuned using the EMOTION FACES-SHAPES task (Finetuning Schedule 1, Date: 02/10/2023). The model is available at `hcp-d/finetuned_model_hcp-d_020824.ckpt`, and it can predict [47 different task contrast maps](misc/hcp-ya_contrasts.txt).
 
-3. **UK Biobank (UKB):** The pre-trained model (on HCP-YA) was fine-tuned on this dataset using the EMOTION FACES-SHAPES task (Finetuning Schedule 1, Date: 10/10/2023). Access the model at `ukb/finetuned_model_021023.ckpt`. It can predict [47 different task contrast maps](misc/hcp-ya_contrasts.txt).
+3. **UK Biobank (UKB):** The pre-trained model (on HCP-YA) was fine-tuned on this dataset using the EMOTION FACES-SHAPES task (Finetuning Schedule 1, Date: 10/10/2023). Access the model at `ukb/finetuned_model_ukb_020824.ckpt`. It can predict [47 different task contrast maps](misc/hcp-ya_contrasts.txt).
 
 Model configurations are stored in the `config.yaml` file within each dataset directory.
 
