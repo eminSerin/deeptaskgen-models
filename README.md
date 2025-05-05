@@ -13,9 +13,9 @@ Model configurations are stored in the `config.yaml` file within each dataset di
 
 ### Finetuning
 We employed two different fine-tuning procedures depending on the datasets: 
-- **Schedule 1:** Used when there are common tasks between the HCP-YA dataset and the target dataset. The output layer was frozen, and only the remaining layers (backbone) were fine-tuned using MSE loss.
-- **Schedule 2:** Utilized when there are no common tasks between the HCP-YA dataset and the target dataset. The output layer was replaced with a new one, and the entire model was fine-tuned using MSE loss.
+- **Schedule 1:** Used when there are common tasks between the HCP-YA dataset and the target dataset. The output layer was frozen, and only the remaining layers (backbone) were fine-tuned using CR-R loss with gray matter (GM) mask.
+- **Schedule 2:** Utilized when there are no common tasks between the HCP-YA dataset and the target dataset. The output layer was replaced with a new one, and the entire model was fine-tuned using CR-R loss with GM mask.
 
 ### Usage
-You need to install the DeepTaskGen package to use the models. The package can be accessed at https://github.com/eminSerin/DeepTaskGen. To predict task contrast maps using the models, refer to the [`deeptaskgen/predict.py`](https://github.com/eminSerin/DeepTaskGen/blob/main/deeptaskgen/predict.py) script.
+You need to install the DeepTaskGen package to use the models. The package can be accessed at https://github.com/eminSerin/DeepTaskGen. To predict task contrast maps using the models, refer to the [`deeptaskgen/predict.py`](https://github.com/eminSerin/DeepTaskGen/blob/main/deeptaskgen/predict.py) script. The model was trained to optimize grey matter (GM) only, which could result in spurious activations outside GM areas; thus, please use the [GM mask](misc/MNI_2mm_GM_mask_crop.nii) when predicting.
 

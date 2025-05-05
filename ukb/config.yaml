@@ -1,4 +1,4 @@
-architecture: unetminimal # Model architecture
+architecture: attentionunet # Model architecture
 conv_dim: 3 # Dimension of convolutional kernels.
 max_depth: 1 # Maximum depth of encoder and decoder networks
 activation: relu_inplace # Activation function 
@@ -13,3 +13,5 @@ lr: 0.001 # Learning rate
 lr_scheduler: true # ReduceLROnPlateau schedule
 n_epochs: 50 # Number of training epochs
 freeze_final_layer: true # Freeze final layer for finetuning. 
+alpha: 0.25 # Alpha parameter for CR-R loss.
+pred_mask: "../misc/MNI_2mm_GM_mask_crop.nii" # Mask to use for loss computation.
